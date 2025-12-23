@@ -217,7 +217,3 @@ def logout():
     resp = RedirectResponse("/", status_code=status.HTTP_303_SEE_OTHER)
     resp.delete_cookie("access_token")
     return resp
-
-
-if __name__ == "__main__":
-    uvicorn.run(app, host="localhost", port=8000)
