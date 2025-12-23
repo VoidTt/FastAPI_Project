@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Вход</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="page">
+
+    <header>
+        <nav class="nav-buttons">
+            <a class="btn btn-ghost" href="register.html">Регистрация</a>
+            <a class="btn btn-primary" href="index.html">Главная</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="canvas single">
+            <div class="card">
+                <div class="form-head">
+                    <div class="panel-title">Вход</div>
+                </div>
+
+                <form action="/login" method="post" class="form-body" autocomplete="off">
+                    <div class="field">
+                        <label for="login-email">Email</label>
+                        <input id="login-email" name="email" type="email" required placeholder="you@example.com">
+                    </div>
+
+                    <div class="field">
+                        <label for="login-password">Пароль</label>
+                        <input id="login-password" name="password" type="password" required minlength="6" placeholder="Введите пароль">
+                    </div>
+
+                    <div class="actions">
+                        <a class="muted-link" href="register.html">Нет аккаунта?</a>
+                        <button class="btn btn-primary" type="submit">Войти</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+</div>
+
+</body>
+</html>

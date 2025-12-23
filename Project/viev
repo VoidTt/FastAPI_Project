@@ -1,0 +1,33 @@
+import sqlite3
+import json
+from datetime import datetime
+
+db = "database.db"
+
+conn = sqlite3.connect(db)
+cur = conn.cursor()
+
+cur.execute("PRAGMA foreign_keys = ON;")
+try:
+    cur.execute("SELECT id, username, email, created_at FROM users ORDER BY id;")
+except Exception as e:
+    print("Ошибка запроса:", e)
+    conn.close()
+    raise SystemExit(1)
+
+rows = cur.fetchall()
+if not rows:
+    print("В таблице users нет записей.")
+else:
+    out = []
+    for r in rows:
+        id_, username, email, created_at = r
+        out.append({
+            "id": id_,
+            "username": username,
+            "email": email,
+            "created_at": created_at
+        })
+    print(json.dumps(out, ensure_ascii=False, indent=2))
+
+conn.close()

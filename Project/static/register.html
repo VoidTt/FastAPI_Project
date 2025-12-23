@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="page">
+
+    <header>
+        <nav class="nav-buttons">
+            <a class="btn btn-ghost" href="login.html">Войти</a>
+            <a class="btn btn-primary" href="index.html">Главная</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="canvas single">
+            <div class="card">
+                <div class="form-head">
+                    <div class="panel-title">Регистрация</div>
+                </div>
+
+                <form action="/register" method="post" class="form-body" autocomplete="off">
+                    <div class="field">
+                        <label for="username">Имя пользователя</label>
+                        <input id="username" name="username" type="text" required minlength="2" placeholder="Иван">
+                    </div>
+
+                    <div class="field">
+                        <label for="reg-email">Email</label>
+                        <input id="reg-email" name="email" type="email" required placeholder="you@example.com">
+                    </div>
+
+                    <div class="field">
+                        <label for="password">Пароль</label>
+                        <input id="password" name="password" type="password" required minlength="6" placeholder="Минимум 6 символов">
+                    </div>
+
+                    <div class="field">
+                        <label for="password_confirm">Подтвердите пароль</label>
+                        <input id="password_confirm" name="password_confirm" type="password" required minlength="6" placeholder="Повторите пароль">
+                    </div>
+
+                    <div class="actions">
+                        <a class="muted-link" href="login.html">Уже есть аккаунт?</a>
+                        <button class="btn btn-primary" type="submit">Зарегистрироваться</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+</div>
+
+</body>
+</html>
