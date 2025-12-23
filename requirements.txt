@@ -1,13 +1,14 @@
-pip install fastapi
-pip install uvicorn[standard]
-pip install sqlalchemy
-pip install python-multipart
-pip install passlib
-pip install bcrypt == 4.0.1
-pip install python-jose
-pip install jinja2
-pip install argon2-cffi
-pip install python-multipart
+fastapi
+uvicorn[standard]
+sqlalchemy
+python-multipart
+passlib
+bcrypt == 4.0.1
+python-jose
+jinja2
+argon2-cffi
+python-multipart
+
 
 
 
