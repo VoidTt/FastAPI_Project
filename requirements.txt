@@ -1,6 +1,3 @@
-.venv\Scripts\activate.bat
-
-
 python -m pip install --upgrade pip
 pip install fastapi
 pip install uvicorn[standard]
@@ -13,6 +10,4 @@ pip install jinja2
 pip install argon2-cffi
 pip install python-multipart
 
-
-uvicorn main:app --reload
 
